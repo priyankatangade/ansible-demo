@@ -15,7 +15,7 @@ pipeline {
             steps {
                 // echo "${TAGVALUE}"
                 echo 'Executing Ansible Playbook'
-                ansiblePlaybook colorized: true, credentialsId: 'svc_ansible_loc', installation: 'Default', inventory: 'inventory/dynamic.aws_ec2.yml',extras: '-e passed_in_hosts=\"tag_${TagKey}_${TagValue}\"', playbook: 'playbook/ansible-demo-pb.yaml'
+                ansiblePlaybook colorized: true, credentialsId: 'ansible_user_auth', installation: 'Default', inventory: 'inventory/dynamic.aws_ec2.yml',extras: '-e passed_in_hosts=\"tag_${TagKey}_${TagValue}\"', playbook: 'playbook/ansible-demo-pb.yaml'
             }
         }
     }
