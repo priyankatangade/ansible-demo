@@ -9,4 +9,4 @@ keyed_groups:
   - prefix: tag
     key: tags
 hostnames:
-  - public-ip-address
+  - private-ip-address
