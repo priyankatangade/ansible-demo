@@ -8,12 +8,12 @@ pipeline {
     stages {
         stage('Ansible-Playbook Execution') {
 
-            environment {
-                TAGVALUE = "tag"_"${TagKey}"+"_"+"${TagValue}"
-            }
+            // environment {
+            //     TAGVALUE = "tag"_"${TagKey}"+"_"+"${TagValue}"
+            // }
 
             steps {
-                echo "${TAGVALUE}"
+                // echo "${TAGVALUE}"
                 echo 'Executing Ansible Playbook'
                 // ansiblePlaybook colorized: true, credentialsId: 'svc_ansible_loc', installation: 'Default', inventory: 'inventory/dynamic.aws_ec2.yml',extras: '-e passed_in_hosts=\"${TAGVALUE}\"', playbook: 'playbook_nav_app_install.yaml'
             }
