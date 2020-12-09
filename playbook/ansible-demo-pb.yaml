@@ -1,6 +1,6 @@
 ---
 - name: Ansible Playbook
-  hosts: "{{ host_group_name }}"
+  hosts: "{{ passed_in_hosts }}"
   gather_facts: true
 
   tasks:
