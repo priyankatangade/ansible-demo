@@ -1,5 +1,5 @@
 plugin: aws_ec2
-boto_profile: test
+boto_profile: sandbox
 regions:
   - eu-west-1
 # keyed_groups may be used to create custom groups
@@ -9,4 +9,4 @@ keyed_groups:
   - prefix: tag
     key: tags
 hostnames:
-  - private-ip-address
+  - public-ip-address
